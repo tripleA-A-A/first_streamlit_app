@@ -23,5 +23,5 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
-fruityvice_normalised = pandas_json_normalise(fruityvice_response.json())
+fruityvice_normalised = pandas.json_normalize(fruityvice_response.json())
 streamlit.text(fruityvice_normalised)
