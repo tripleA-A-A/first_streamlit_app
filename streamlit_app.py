@@ -1,5 +1,6 @@
 import streamlit
 import pandas
+import requests
 
 streamlit.title("Breakfast Favorites")
 streamlit.header("Breakfast Menu")
@@ -7,6 +8,9 @@ streamlit.text("Omega 3 & Blueberry Oatmeal")
 streamlit.text("Kale, Spinach and Rocket")
 streamlit.text("Hard Boiled Free-Range Egg")
 
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
